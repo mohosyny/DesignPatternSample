@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import neo.mohosyny.designpatterns.Builder.Person;
+import neo.mohosyny.designpatterns.Factory.Shape;
+import neo.mohosyny.designpatterns.Factory.ShapeFactory;
+import neo.mohosyny.designpatterns.Factory.Square;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +21,15 @@ public class MainActivity extends AppCompatActivity {
                 .setAge(26)
                 .setWeight(80)
                 .setHeight(175)
-                .setFirstName("moho")
+                .setFirstName("mo")
                 .setLastName("hsyny")
                 .Build();
+
+
+
+        //Factory pattern usage
+        Shape circle = ShapeFactory.getShape("Square");
+
 
     }
 }
